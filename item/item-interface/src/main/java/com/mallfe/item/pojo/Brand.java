@@ -1,5 +1,6 @@
 package com.mallfe.item.pojo;
 
+import lombok.Data;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -12,6 +13,7 @@ import javax.persistence.Table;
  * @since 2019-07-05
  */
 @Table(name = "tb_brand")
+@Data
 public class Brand {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
