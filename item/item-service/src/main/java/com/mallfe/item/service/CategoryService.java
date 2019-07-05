@@ -23,7 +23,7 @@ public class CategoryService {
         List<Category> list= categoryMapper.select(t);
         //判断查询结果
         if(CollectionUtils.isEmpty(list)){
-            throw new MallfeException(ExceptionEnum.CATEGORY_NOT_DOUND);
+            throw new MallfeException(ExceptionEnum.BRAND_NOT_DOUND);
         }
         return list;
     }

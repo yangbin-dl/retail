@@ -17,6 +17,11 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
+    /**
+     *
+     * @param pid
+     * @return
+     */
     @GetMapping("list")
     public ResponseEntity<List<Category>> queryCategoryListByPid(@RequestParam("pid") Long pid){
         return ResponseEntity.ok(categoryService.queryCategoryListByPid(pid));

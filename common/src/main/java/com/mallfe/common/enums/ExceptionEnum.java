@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public enum ExceptionEnum {
-    PRICE_CANNOT_BE_NULL(400,"价格不能为空"),
-    CATEGORY_NOT_DOUND(404,"商品分类未查到")
+    CATEGORY_NOT_DOUND(404,"商品分类未查到"),
+    BRAND_NOT_DOUND(404,"品牌未查到")
     ;
     private int code;
     private String msg;
