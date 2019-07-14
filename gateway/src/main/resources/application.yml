@@ -27,3 +27,6 @@ hystrix:
         isolation:
           thread:
             timeoutInMillisecond: 5000 # 熔断超时时长：5000ms
+feign:
+  hystrix:
+    enabled: false

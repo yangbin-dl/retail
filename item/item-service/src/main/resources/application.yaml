@@ -5,7 +5,7 @@ spring:
     name: item-service
   datasource:
     url: jdbc:mysql://rm-m5es50j9lfj56x323jo.mysql.rds.aliyuncs.com:3306/alpha?allowMulitQueries=true&useUnicode=true&characterEncoding=utf8
-    username: root
+    username: alphauser
     password: Tonsan123
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:

@@ -4,8 +4,11 @@ import com.mallfe.item.pojo.Brand;
 import com.mallfe.item.service.BrandService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 /**
@@ -40,5 +43,17 @@ public class BrandController {
     ){
         PageResult<Brand> result=brandService.queryBrandByPage(page,rows,sortBy,desc,key);
         return ResponseEntity.ok(result);
+    }
+
+    /**
+     * 新增品牌
+     * @param brand
+     * @param cids
+     * @return
+     */
+    @PostMapping
+    public ResponseEntity<Void> saveBrand(Brand brand, @RequestParam("cids")List<Long> cids){
+        brandService.saveBrand(brand,cids);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }
