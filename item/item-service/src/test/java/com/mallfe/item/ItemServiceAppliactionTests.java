@@ -39,7 +39,7 @@ public class ItemServiceAppliactionTests {
 
 		String content =mvcResult.getResponse().getContentAsString();
 
-//		log.info("content::Gson====="+ new Gson().toJson(data));
+//		dd log.info("content::Gson====="+ new Gson().toJson(data));
 //		log.info("content::JsonUtils====="+ JsonUtils.serialize(data));
 		log.info("content::====="+ content);
 
